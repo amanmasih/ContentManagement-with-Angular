@@ -1,0 +1,239 @@
+*::-webkit-scrollbar {
+width: 10px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+background: #ebecf0;        /* color of the tracking area */
+border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: #026aa7;    /* color of the scroll thumb */
+border-radius: 20px;       /* roundness of the scroll thumb */
+border: 3px solid #ebecf0;  /* creates padding around scroll thumb */
+}
+
+body,
+html,
+.tc-surface {
+    height: 100%;
+    background-color: #026aa7;
+}
+
+.tc-surface {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Page Header CSS*/
+
+.tc-page-header {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .15);
+    justify-content: space-between;
+    color: white;
+}
+
+.tc-page-header-boards,
+.tc-page-header-user,
+.tc-page-header-notifications {
+    margin: 5px;
+    padding: 10px;
+    background: rgb(52, 73, 94);
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.tc-page-header-name {
+    color: white;
+    font-size: 2em;
+}
+
+.tc-page-header-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+@font-face {
+    font-family: HoneyScript;
+    src: url('./fonts/HoneyScript-SemiBold.ttf');
+}
+
+
+/* End of page header css */
+
+
+/* Board View*/
+
+.tc-page-boards-view {
+    padding: 10px;
+    margin: 10px
+}
+
+.tc-page-board-section-header-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+
+/* End of board view */
+
+
+/*Board Section*/
+
+#tc-page-board-title {
+    color: whitesmoke;
+}
+
+.tc-page-board-section {
+    padding: 30px;
+}
+
+.tc-page-board-section-header-text {
+    margin-bottom: 10px;
+}
+
+
+/* End of Board Section */
+
+
+/* Board List */
+
+.tc-page-board-section-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tc-page-board-section-list>* {
+    margin: 0.5% 0 0 1%;
+}
+
+.tc-page-board-section-list-item>a {
+    padding: 10px;
+    width: 250px;
+    background-color: rgb(44, 62, 80);
+    color: white;
+    border-radius: 2px;
+    height: 80px;
+    display: block;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+
+/* End Of Board List */
+
+
+/*lanes on the board*/
+
+.tc-page-board {
+    padding: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.tc-page-board-options {
+    display: flex;
+    flex-direction: row;
+}
+
+.tc-page-board-lanes {
+    padding: 15px;
+    position: relative;
+    height: 100%;
+    flex: 1 1;
+}
+
+.tc-page-board-lanes-wrapper {
+    position: absolute;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    flex: 1 1;
+}
+
+.tc-page-board-lane-wrapper {
+    height: 92%;
+    flex: 1;
+    display: inline-flex;
+    flex-wrap: wrap;
+    /* overflow-y: auto; */
+    vertical-align: top;
+    width: 270px;
+}
+
+.tc-page-board-lane {
+    overflow-y: auto;
+    background-color: #ebecf0;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 10px;
+    vertical-align: top;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-height: 100%;
+    position: relative;
+    white-space: normal;
+}
+
+.tc-page-board-lane-title {
+    font-size: 0.7em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    height: 19px;
+}
+
+.tc-page-board-lane-card {
+    border-radius: 3px;
+    font-weight: 400;
+    padding: 3px;
+    font-size: 0.7em;
+    margin: 5px;
+    flex: 1 1 auto;
+    background-color: whitesmoke; 
+}
+
+.tc-page-board-list-lane-card {
+    margin-top: 5px 0 5px 0;
+    background-color: white;
+    /* overflow-y: overlay; */
+    flex: 1 1;
+}
+
+.tc-page-board-add-card {
+    font-size: 0.7em;
+    margin: 2px;
+}
+
+.tc-page-list-add {
+    position: absolute;
+    visibility: collapse;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    background: red;
+    box-sizing: border-box;
+}
+
+.tc-page-board-lane>.open {
+    top: 0;
+    left: 0;
+    visibility: visible;
+}
+
+
+/*End of the lanes on the board*/
